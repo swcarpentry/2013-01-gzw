@@ -1,0 +1,686 @@
+bash-3.2$ ipydev
+Python 2.7.3 (default, May 29 2012, 09:32:35) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 0.13 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: 2+2
+Out[1]: 4
+
+In [2]: 2*3-5
+Out[2]: 1
+
+In [3]: 10*(3-2/2)
+Out[3]: 20
+
+In [4]: -10-3
+Out[4]: -13
+
+In [5]: 2.5*3
+Out[5]: 7.5
+
+In [6]: -2.e-2
+Out[6]: -0.02
+
+In [7]: 'abc'
+Out[7]: 'abc'
+
+In [8]: "abc"
+Out[8]: 'abc'
+
+In [9]: 'a' + 'b'
+Out[9]: 'ab'
+
+In [10]: type(2)
+Out[10]: int
+
+In [11]: type(3.1)
+Out[11]: float
+
+In [12]: type('abc')
+Out[12]: str
+
+In [13]: type(3)
+Out[13]: int
+
+In [14]: type(2)
+Out[14]: int
+
+In [15]: 2*3
+Out[15]: 6
+
+In [16]: 'a' * 'b'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-16-f620c13d885e> in <module>()
+----> 1 'a' * 'b'
+
+TypeError: can't multiply sequence by non-int of type 'str'
+
+In [17]: 2 * 'b'
+Out[17]: 'bb'
+
+In [18]: sqrt(2.)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-18-dcb9a9f3bdff> in <module>()
+----> 1 sqrt(2.)
+
+NameError: name 'sqrt' is not defined
+
+In [19]: from numpy import sqrt
+
+In [20]: sqrt(2.)
+Out[20]: 1.4142135623730951
+
+In [21]: import numpy
+
+In [22]: numpy
+Out[22]: <module 'numpy' from '/usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/__init__.pyc'>
+
+In [23]: numpy.sqrt(2.)
+Out[23]: 1.4142135623730951
+
+In [24]: nunmpy.log(2.)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-24-e4a1dd5a03ce> in <module>()
+----> 1 nunmpy.log(2.)
+
+NameError: name 'nunmpy' is not defined
+
+In [25]: numpy.log(2.)
+Out[25]: 0.69314718055994529
+
+In [26]: import numpy as np
+
+In [27]: np.sqrt(2.)
+Out[27]: 1.4142135623730951
+
+In [28]: 1
+Out[28]: 1
+
+In [29]: 1.
+Out[29]: 1.0
+
+In [30]: '1'
+Out[30]: '1'
+
+In [31]: type('1')
+Out[31]: str
+
+In [32]: x = 2*3-4*9
+
+In [33]: x
+Out[33]: -30
+
+In [34]: type(x)
+Out[34]: int
+
+In [35]: x = 'abc'
+
+In [36]: type(x)
+Out[36]: str
+
+In [37]: sqrt
+Out[37]: <ufunc 'sqrt'>
+
+In [38]: sqrt = 10
+
+In [39]: sqrt(2.)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-39-dcb9a9f3bdff> in <module>()
+----> 1 sqrt(2.)
+
+TypeError: 'int' object is not callable
+
+In [40]: 10(2.)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-40-87528d6c9b52> in <module>()
+----> 1 10(2.)
+
+TypeError: 'int' object is not callable
+
+In [41]: 'abc'.upper()
+Out[41]: 'ABC'
+
+In [42]: 'KFJDLKSFJ'.lower()
+Out[42]: 'kfjdlksfj'
+
+In [43]: '   jfdghdkj  '.strip()
+Out[43]: 'jfdghdkj'
+
+In [44]: '   jfdghdkj  '.rstrip()
+Out[44]: '   jfdghdkj'
+
+In [45]: '   jfdghdkj  '.lstrip()
+Out[45]: 'jfdghdkj  '
+
+In [46]: '   jfdg hdkj  '.lstrip()
+Out[46]: 'jfdg hdkj  '
+
+In [47]: '   jfdg hdkj  '.strip()
+Out[47]: 'jfdg hdkj'
+
+In [48]: '   jfdg hdkj  '.strip().split()
+Out[48]: ['jfdg', 'hdkj']
+
+In [49]: "abc,def"
+Out[49]: 'abc,def'
+
+In [50]: "abc,def".split(',')
+Out[50]: ['abc', 'def']
+
+In [51]: 'abcdef'.find('cd')
+Out[51]: 2
+
+In [52]: 'abcdef'.find('xy')
+Out[52]: -1
+
+In [53]: find('abc', 'c')
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-53-d078cabef2e5> in <module>()
+----> 1 find('abc', 'c')
+
+NameError: name 'find' is not defined
+
+In [54]: 2+3
+Out[54]: 5
+
+In [55]: 2.__add__(3)
+  File "<ipython-input-55-8325c72ec6d6>", line 1
+    2.__add__(3)
+            ^
+SyntaxError: invalid syntax
+
+
+In [56]: (2).__add__(3)
+Out[56]: 5
+
+In [57]: 2.
+Out[57]: 2.0
+
+In [58]: 2..__add__(3)
+Out[58]: 5.0
+
+In [59]: len('abcdef')
+Out[59]: 6
+
+In [60]: 'abcdef'.len()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-60-838c159c723b> in <module>()
+----> 1 'abcdef'.len()
+
+AttributeError: 'str' object has no attribute 'len'
+
+In [61]: 'abcdef'.__len__()
+Out[61]: 6
+
+In [62]: '   jfdg hdkj  '.strip().split()
+Out[62]: ['jfdg', 'hdkj']
+
+In [63]: len('   jfdg hdkj  '.strip().split())
+Out[63]: 2
+
+In [64]: [1, 2, 3]
+Out[64]: [1, 2, 3]
+
+In [65]: len([1, 2, 3])
+Out[65]: 3
+
+In [66]: ['a', 'b')
+  File "<ipython-input-66-2fc9b15e9259>", line 1
+    ['a', 'b')
+             ^
+SyntaxError: invalid syntax
+
+
+In [67]: ['a', 'b']
+Out[67]: ['a', 'b']
+
+In [68]: [1, 'a']
+Out[68]: [1, 'a']
+
+In [69]: type([1, 'a'])
+Out[69]: list
+
+In [70]: list1 = [1, 2, 3]
+
+In [71]: list2 = ['a', 'b']
+
+In [72]: list1
+Out[72]: [1, 2, 3]
+
+In [73]: list2
+Out[73]: ['a', 'b']
+
+In [74]: list1 + list2
+Out[74]: [1, 2, 3, 'a', 'b']
+
+In [75]: list1.__add__(list2)
+Out[75]: [1, 2, 3, 'a', 'b']
+
+In [76]: my_list = []
+
+In [77]: len(my_list)
+Out[77]: 0
+
+In [78]: my_list.append(1)
+
+In [79]: my_list
+Out[79]: [1]
+
+In [80]: len(my_list)
+Out[80]: 1
+
+In [81]: my_list.append(42)
+
+In [82]: my_list
+Out[82]: [1, 42]
+
+In [83]: my_list.append(-1)
+
+In [84]: my_list
+Out[84]: [1, 42, -1]
+
+In [85]: my_list.reverse()
+
+In [86]: my_list
+Out[86]: [-1, 42, 1]
+
+In [87]: my_list.sort()
+
+In [88]: my_list
+Out[88]: [-1, 1, 42]
+
+In [89]: [[], [1]]
+Out[89]: [[], [1]]
+
+In [90]: len([[], [1]])
+Out[90]: 2
+
+In [91]: list_list = [[], [1]]
+
+In [92]: list_list.sort()
+
+In [93]: list_list = [[], [1]]
+
+In [94]: list_list.sort()
+
+In [95]: list_list
+Out[95]: [[], [1]]
+
+In [96]: range(10)
+Out[96]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+In [97]: len(range(10))
+Out[97]: 10
+
+In [98]: a = [2]
+
+In [99]: b = a
+
+In [100]: b
+Out[100]: [2]
+
+In [101]: a
+Out[101]: [2]
+
+In [102]: a.append(3)
+
+In [103]: a
+Out[103]: [2, 3]
+
+In [104]: b
+Out[104]: [2, 3]
+
+In [105]: a = [2]
+
+In [106]: b = [2]
+
+In [107]: a.append(3)
+
+In [108]: a
+Out[108]: [2, 3]
+
+In [109]: b
+Out[109]: [2]
+
+In [110]: a = [2]
+
+In [111]: b = [2]
+
+In [112]: a == b
+Out[112]: True
+
+In [113]: a is b
+Out[113]: False
+
+In [114]: a = [4]
+
+In [115]: b = a
+
+In [116]: a == b
+Out[116]: True
+
+In [117]: a is b
+Out[117]: True
+
+In [118]: id(a)
+Out[118]: 4334855232
+
+In [119]: id(b(
+   .....: )
+   .....: 
+   .....: .
+   .....: )
+  File "<ipython-input-119-4e298d2ee6f9>", line 4
+    )
+    ^
+SyntaxError: invalid syntax
+
+
+In [120]: id(b)
+Out[120]: 4334855232
+
+In [121]: id(a) == id(b)
+Out[121]: True
+
+In [122]: 2 == 2
+Out[122]: True
+
+In [123]: a = [2]
+
+In [124]: b = a
+
+In [125]: b = [2]
+
+In [126]: a == b
+Out[126]: True
+
+In [127]: a is b
+Out[127]: False
+
+In [128]: from copy import copy
+
+In [129]: b = copy(a)
+
+In [130]: from copy import deepcopy
+
+In [131]: a = [[1], [2]]
+
+In [132]: a
+Out[132]: [[1], [2]]
+
+In [133]: a[0]
+Out[133]: [1]
+
+In [134]: a[0].append(42)
+
+In [135]: a
+Out[135]: [[1, 42], [2]]
+
+In [136]: a = [[1], [2]]
+
+In [137]: b = copy(a)
+
+In [138]: a
+Out[138]: [[1], [2]]
+
+In [139]: b
+Out[139]: [[1], [2]]
+
+In [140]: a.append('abc')
+
+In [141]: a
+Out[141]: [[1], [2], 'abc']
+
+In [142]: b
+Out[142]: [[1], [2]]
+
+In [143]: a[0].append(42)
+
+In [144]: a
+Out[144]: [[1, 42], [2], 'abc']
+
+In [145]: b
+Out[145]: [[1, 42], [2]]
+
+In [146]: a = [[1], [2]]
+
+In [147]: b = deepcopy(a)
+
+In [148]: b
+Out[148]: [[1], [2]]
+
+In [149]: a[0].append(42)
+
+In [150]: a
+Out[150]: [[1, 42], [2]]
+
+In [151]: b
+Out[151]: [[1], [2]]
+
+In [152]: a = ['a', 4, 43.0]
+
+In [153]: a
+Out[153]: ['a', 4, 43.0]
+
+In [154]: type(a[0])
+Out[154]: str
+
+In [155]: type(a[2])
+Out[155]: float
+
+In [156]: type(a[3])
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+<ipython-input-156-083100b773de> in <module>()
+----> 1 type(a[3])
+
+IndexError: list index out of range
+
+In [157]: type(a[1])
+Out[157]: int
+
+In [158]: type(a[2])
+Out[158]: float
+
+In [159]: for element in a:
+   .....:    print type(element)
+   .....: 
+<type 'str'>
+<type 'int'>
+<type 'float'>
+
+In [160]: for element in a:
+   .....:    print element
+   .....: 
+a
+4
+43.0
+
+In [161]: for element in 'abcdef':
+   .....:   print element.upper()
+   .....: 
+A
+B
+C
+D
+E
+F
+
+In [162]: for element in a:
+   .....:    print a
+   .....:    print type(a)
+   .....: 
+['a', 4, 43.0]
+<type 'list'>
+['a', 4, 43.0]
+<type 'list'>
+['a', 4, 43.0]
+<type 'list'>
+
+In [163]: for element in a:
+   .....:    print a, type(a)
+   .....: 
+['a', 4, 43.0] <type 'list'>
+['a', 4, 43.0] <type 'list'>
+['a', 4, 43.0] <type 'list'>
+
+In [164]: a
+Out[164]: ['a', 4, 43.0]
+
+In [165]: [type(a[0]), type(a[1]), type(a[2])]
+Out[165]: [str, int, float]
+
+In [166]: [type (x) for x in a]
+Out[166]: [str, int, float]
+
+In [167]: result = []
+
+In [168]: for x in a:
+   .....:    result.append(type(x))
+   .....: 
+
+In [169]: open('great_input_file')
+Out[169]: <open file 'great_input_file', mode 'r' at 0x101ffced0>
+
+In [170]: open('great_input_file').read()
+Out[170]: 'line 1\nline 2\nline 3\n'
+
+In [171]: open('great_input_file').readlines()
+Out[171]: ['line 1\n', 'line 2\n', 'line 3\n']
+
+In [172]: open('/etc/autofs.conf').readlines()
+Out[172]: 
+['#\n',
+ '# This file is used to configure the automounter\n',
+ '#\n',
+ '\n',
+ '# The number of seconds after which an automounted file system will\n',
+ "# be unmounted if it hasn't been referred to within that period of\n",
+ '# time.  The default is 10 minutes (600 seconds).\n',
+ '# This is equivalent to the -t option in automount(8).\n',
+ 'AUTOMOUNT_TIMEOUT=3600\n',
+ '\n',
+ '# If TRUE, automount(8) will print more detailed\n',
+ '# information about the actions it takes.\n',
+ '# This is equivalent to the -v option to automount(8).\n',
+ '#AUTOMOUNT_VERBOSE=FALSE\n',
+ '\n',
+ '# If TRUE, automountd(8) will log to syslogd(8) more\n',
+ '# detailed information about the actions it takes.\n',
+ '# This is equivalent to the -v option to automountd(8).\n',
+ '#AUTOMOUNTD_VERBOSE=FALSE\n',
+ '\n',
+ '# If TRUE, automountd(8) will disable browsing of all maps.\n',
+ '# This is equivalent to the -n option to automountd(8).\n',
+ '#AUTOMOUNTD_NOBROWSE=FALSE\n',
+ '\n',
+ '# The trace level for logging information about requests received\n',
+ '# by automountd(8) from autofs, processing done for those requests,\n',
+ '# and replies sent to autofs.  The default level of 0 causes no\n',
+ '# information to be logged; each higher value causes more information\n',
+ '# to be logged.  This controls the same trace level that the -T option\n',
+ '# to automountd(8) controls.\n',
+ '#AUTOMOUNTD_TRACE=0\n',
+ '\n',
+ '# Mount options.\n',
+ '# A string containing a comma-separated list of mount options\n',
+ '# that will be applied, by default, to all mounts done by automountd(8).\n',
+ '# The options for a particular mount can override these options.\n',
+ '# This controls the same default mount options that the -o option to\n',
+ '# automountd(8) controls.\n',
+ 'AUTOMOUNTD_MNTOPTS=nosuid,nodev\n',
+ '\n',
+ '# Environment variables.  The format is AUTOMOUNTD_ENV=ENV=value.\n',
+ '# There should be one line per environment variable to be set and\n',
+ '# there can be as many of these lines as are required.\n',
+ '#AUTOMOUNTD_ENV=\n']
+
+In [173]: open('great_input_file').readlines()
+Out[173]: ['line 1\n', 'line 2\n', 'line 3\n']
+
+In [174]: [line.strip() for line in open('great_input_file').readlines()]
+Out[174]: ['line 1', 'line 2', 'line 3']
+
+In [175]: open('great_input_file').readlines()
+Out[175]: ['line 1\n', 'line 2\n', 'line 3\n']
+
+In [176]: lines = open('great_input_file').readlines()
+
+In [177]: lines
+Out[177]: ['line 1\n', 'line 2\n', 'line 3\n']
+
+In [178]: for line in lines:
+   .....:    line = line.strip()
+   .....: 
+
+In [179]: lines
+Out[179]: ['line 1\n', 'line 2\n', 'line 3\n']
+
+In [180]: for i in range(len(lines)):
+   .....:    lines[i] = lines[i].strip()
+   .....: 
+
+In [181]: lines
+Out[181]: ['line 1', 'line 2', 'line 3']
+
+In [182]: range(3)
+Out[182]: [0, 1, 2]
+
+In [183]: [line.strip() for line in open('great_input_file').readlines()]
+Out[183]: ['line 1', 'line 2', 'line 3']
+
+In [184]: [line.strip() for line in open('great_input_file')]
+Out[184]: ['line 1', 'line 2', 'line 3']
+
+In [185]: 'abc
+  File "<ipython-input-185-7c7e87ffa0fb>", line 1
+    'abc
+       ^
+SyntaxError: EOL while scanning string literal
+
+
+In [186]: 'abc\n'
+Out[186]: 'abc\n'
+
+In [187]: 'abc\\'
+Out[187]: 'abc\\'
+
+In [188]: print 'abc\\'
+abc\
+
+In [189]: 
+
+In [189]: a
+Out[189]: ['a', 4, 43.0]
+
+In [190]: a[0:1]
+Out[190]: ['a']
+
+In [191]: a[0:2]
+Out[191]: ['a', 4]
+
+In [192]: a[0:3]
+Out[192]: ['a', 4, 43.0]
+
+In [193]: a[0:5]
+Out[193]: ['a', 4, 43.0]
+
+In [194]: a[1:3]
+Out[194]: [4, 43.0]
+
+In [195]: a[1:]
+Out[195]: [4, 43.0]
+
+In [196]: 
